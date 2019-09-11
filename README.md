@@ -6,56 +6,55 @@
 
 [![Documentation Status](https://readthedocs.org/projects/gccestimating/badge/?version=latest)](https://gccestimating.readthedocs.io/en/latest/?badge=latest)
 
-This project provides estimators for the generalized cross correlation according to *Knapp and Carter 1976* [^KC76].
+This project provides estimators for the generalized cross correlation according to *Knapp and Carter 1976* [KC76].
 
 
-## Implemented Estimators (compare [^KC76])
+## Implemented Estimators (compare [KC76])
 
 The generalized Estimator can be described by
 
-
-```math
+$$
 \hat{R}_{xy}^{(\text{g})} = \int_{-\infty}^{\infty}{\psi_\text{g}(f) G_{xy}(f)~e^{\text{j} 2\pi f \tau} df}
-```
+$$
 
-where $`G_{xy}(f)`$ denotes the cross power spectrum of $`x(t)`$ and $`y(t)`$.
-In this project, all estimates are computed in the spectral domain using the *Wiener-Kinchin relations* (e.g. $`G_{xx}=X(f)X^{*}(f)`$).
+where $G_{xy}(f)$ denotes the cross power spectrum of $x(t)$ and $y(t)$.
+In this project, all estimates are computed in the spectral domain using the *Wiener-Kinchin relations* (e.g. $G_{xx}=X(f)X^{*}(f)$).
 
 Following estimators are implemented:
 
 - **Cross Correlation** 
-  ```math
+  $$
   \psi_{\text{CC}}=1
-  ```
+  $$
 
 - **Roth**; same as the $`H_1`$ estimator describing the Wiener-Hopf filter
-  ```math
+  $$
   \psi_{\text{Roth}} = \frac{1}{G_{xx}(f)}
-  ```
+  $$
 
 - **Smoothed Coherence Transform** (SCOT): 
-  ```math
+  $$
   \psi_{\text{SCOT}} = \frac{1}{\sqrt{G_{xx}(f)G_{yy}(f)}}
-  ```
+  $$
 
 - **PHAse Transform** (PHAT): 
-  ```math
+  $$
   \psi_{\text{PHAT}} = \frac{1}{|G_{xy}(f)|}
-  ```
+  $$
 
 - Eckart
-  ```math
+  $$
   \psi_{\text{Eckart}} = \frac{G_{uu}(f)}{G_{nn}(f)G_{mm}(f)}
-  ```
+  $$
 
 - **Hanan Thomson** (HT), Maximum Likelihood  estimator 
-  ```math
+  $$
   \psi_{\text{HT}} = \psi_{\text{ML}} = \frac{\left|\gamma_{xy}(f)\right|^2}{\left|G_{xy}\right| \left(1-\gamma_{xy}(f)\right)^2}
-  ```
+  $$
   with 
-  ```math
+  $$
   \gamma_{xy}(f) = \frac{G_{xy}(f)}{\sqrt{G_{xx}(f)G_{yy}(f)}}
-  ```
+  $$
 
 ## Insalling
 
@@ -127,4 +126,4 @@ plt.show()
 
 ## References
 
-[^KC76]: Knapp and Carter, "The Generalized Correlation Method for Estimation of Time Delay", IEEE Trans. Acoust., Speech, Signal Processing, August, 1976
+[KC76]: Knapp and Carter, "The Generalized Correlation Method for Estimation of Time Delay", IEEE Trans. Acoust., Speech, Signal Processing, August, 1976
