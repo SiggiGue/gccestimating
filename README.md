@@ -25,7 +25,7 @@ Following estimators are implemented:
   <img src="https://render.githubusercontent.com/render/math?math=\psi_{\text{CC}}=1">
   
 
-- **Roth**; same as the $`H_1`$ estimator describing the Wiener-Hopf filter
+- **Roth**; same as the <img src="https://render.githubusercontent.com/render/math?math=`H_1`"> estimator describing the Wiener-Hopf filter
   <img src="https://render.githubusercontent.com/render/math?math=\psi_{\text{Roth}} = \frac{1}{G_{xx}(f)}">
 
 - **Smoothed Coherence Transform** (SCOT): 
