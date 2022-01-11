@@ -13,48 +13,34 @@ This project provides estimators for the generalized cross correlation according
 
 The generalized Estimator can be described by
 
-$$
-\hat{R}_{xy}^{(\text{g})} = \int_{-\infty}^{\infty}{\psi_\text{g}(f) G_{xy}(f)~e^{\text{j} 2\pi f \tau} df}
-$$
 
-where $G_{xy}(f)$ denotes the cross power spectrum of $x(t)$ and $y(t)$.
-In this project, all estimates are computed in the spectral domain using the *Wiener-Kinchin relations* (e.g. $G_{xx}=X(f)X^{*}(f)$).
+<img src="https://render.githubusercontent.com/render/math?math=\hat{R}_{xy}^{(\text{g})} = \int_{-\infty}^{\infty}{\psi_\text{g}(f) G_{xy}(f)~e^{\text{j} 2\pi f \tau} df}">
+
+where <img src="https://render.githubusercontent.com/render/math?math=G_{xy}(f)"> denotes the cross power spectrum of <img src="https://render.githubusercontent.com/render/math?math=x(t)"> and <img src="https://render.githubusercontent.com/render/math?math=y(t)">.
+In this project, all estimates are computed in the spectral domain using the *Wiener-Kinchin relations* (e.g. <img src="https://render.githubusercontent.com/render/math?math=G_{xx}=X(f)X^{*}(f)">).
 
 Following estimators are implemented:
 
 - **Cross Correlation** 
-  $$
-  \psi_{\text{CC}}=1
-  $$
+  <img src="https://render.githubusercontent.com/render/math?math=\psi_{\text{CC}}=1">
+  
 
 - **Roth**; same as the $`H_1`$ estimator describing the Wiener-Hopf filter
-  $$
-  \psi_{\text{Roth}} = \frac{1}{G_{xx}(f)}
-  $$
+  <img src="https://render.githubusercontent.com/render/math?math=\psi_{\text{Roth}} = \frac{1}{G_{xx}(f)}">
 
 - **Smoothed Coherence Transform** (SCOT): 
-  $$
-  \psi_{\text{SCOT}} = \frac{1}{\sqrt{G_{xx}(f)G_{yy}(f)}}
-  $$
+  <img src="https://render.githubusercontent.com/render/math?math=\psi_{\text{SCOT}} = \frac{1}{\sqrt{G_{xx}(f)G_{yy}(f)}}">
 
 - **PHAse Transform** (PHAT): 
-  $$
-  \psi_{\text{PHAT}} = \frac{1}{|G_{xy}(f)|}
-  $$
+  <img src="https://render.githubusercontent.com/render/math?math=\psi_{\text{PHAT}} = \frac{1}{|G_{xy}(f)|}">
 
 - Eckart
-  $$
-  \psi_{\text{Eckart}} = \frac{G_{uu}(f)}{G_{nn}(f)G_{mm}(f)}
-  $$
+  <img src="https://render.githubusercontent.com/render/math?math=\psi_{\text{Eckart}} = \frac{G_{uu}(f)}{G_{nn}(f)G_{mm}(f)}">
 
 - **Hanan Thomson** (HT), Maximum Likelihood  estimator 
-  $$
-  \psi_{\text{HT}} = \psi_{\text{ML}} = \frac{\left|\gamma_{xy}(f)\right|^2}{\left|G_{xy}\right| \left(1-\gamma_{xy}(f)\right)^2}
-  $$
+  <img src="https://render.githubusercontent.com/render/math?math=\psi_{\text{HT}} = \psi_{\text{ML}} = \frac{\left|\gamma_{xy}(f)\right|^2}{\left|G_{xy}\right| \left(1-\gamma_{xy}(f)\right)^2}">
   with 
-  $$
-  \gamma_{xy}(f) = \frac{G_{xy}(f)}{\sqrt{G_{xx}(f)G_{yy}(f)}}
-  $$
+  <img src="https://render.githubusercontent.com/render/math?math=\gamma_{xy}(f) = \frac{G_{xy}(f)}{\sqrt{G_{xx}(f)G_{yy}(f)}}">
 
 ## Insalling
 
