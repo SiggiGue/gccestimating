@@ -1,6 +1,6 @@
 # Generalized Cross Correlation (GCC) Estimates
 
-[![Build Status](https://travis-ci.org/SiggiGue/gccestimating.svg?branch=master)](https://travis-ci.org/SiggiGue/gccestimating)
+[![CodeFactor](https://www.codefactor.io/repository/github/siggigue/gccestimating/badge)](https://www.codefactor.io/repository/github/siggigue/gccestimating)
 
 [![Coverage Status](https://coveralls.io/repos/github/SiggiGue/gccestimating/badge.svg)](https://coveralls.io/github/SiggiGue/gccestimating)
 
