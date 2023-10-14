@@ -1,9 +1,7 @@
 # Generalized Cross Correlation (GCC) Estimates
 
 [![CodeFactor](https://www.codefactor.io/repository/github/siggigue/gccestimating/badge)](https://www.codefactor.io/repository/github/siggigue/gccestimating)
-
 [![Coverage Status](https://coveralls.io/repos/github/SiggiGue/gccestimating/badge.svg)](https://coveralls.io/github/SiggiGue/gccestimating)
-
 [![Documentation Status](https://readthedocs.org/projects/gccestimating/badge/?version=latest)](https://gccestimating.readthedocs.io/en/latest/?badge=latest)
 
 This project provides estimators for the generalized cross correlation according to *Knapp and Carter 1976* [KC76].
