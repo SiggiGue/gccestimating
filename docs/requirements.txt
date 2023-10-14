@@ -1,3 +1,4 @@
 numpydoc
 numpy
 matplotlib
+sphinx-rtd-theme
