@@ -1,22 +1,21 @@
-[tool.poetry]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
 name = "gccestimating"
 version = "0.2.1"
 description = "Generalized Cross Correlation estimation based on numpy."
-authors = ["Siegfried Gündert <siegfried.guendert@googlemail.com>"]
+authors = [{ name = "Siegfried Gündert", email = "siegfried.guendert@googlemail.com" }]
+requires-python = ">3.8,<4.0"
 license = "MPL-2.0"
+dependencies = ["numpy>=1.22"]
 
-[tool.poetry.dependencies]
-python = ">3.8,<4.0"
-numpy = ">=1.22"
-
-[tool.poetry.dev-dependencies]
-ipython = ">= 8.10"
-matplotlib = ">=3.6"
-pytest = ">=7.0"
-pytest-assume = ">=2.4"
-pytest-cov = ">=4.0"
-
-
-[build-system]
-requires = ["poetry-core>=1.0.0"]
-build-backend = "poetry.core.masonry.api"
+[dependency-groups]
+dev = [
+    "ipython>= 8.10",
+    "matplotlib>=3.6",
+    "pytest>=7.0",
+    "pytest-assume>=2.4",
+    "pytest-cov>=4.0",
+]

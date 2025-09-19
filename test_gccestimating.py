@@ -13,8 +13,8 @@ def test_estimate():
         sig=np.random.randn(11), 
         spec=np.random.randn(5))
     assume(len(est) == 11)
-    assume(np.all(np.array(est) == est.sig))
-    assume(np.all(np.array(est, dtype=np.float16)==est.sig.astype(np.float16)))
+    assume(np.all(np.asarray(est) == est.sig))
+    assume(np.all(np.asarray(est, dtype=np.float16)==est.sig.astype(np.float16)))
     assume(est.index_to_lag(5) == 0)
     assume(est.index_to_lag(6, samplerate=2) == 1/2)
 
@@ -25,8 +25,8 @@ def test_gcc_autocorrelation():
     cc = gcc.cc()
     assume(len(cc.sig) == len(sig)*2-1)
     assume(np.allclose(cc.sig[1023], np.sum(sig**2)))
-    assume(np.array(cc, dtype=np.float16).dtype==np.float16)    
-    assume(np.all(np.array(cc) ==cc.sig))    
+    assume(np.asarray(cc, dtype=np.float16).dtype==np.float16)    
+    assume(np.all(np.asarray(cc) ==cc.sig))    
     ccroth = gcc.roth()
     assume(ccroth.sig[1023]==1)
     assume(np.sum(ccroth.sig)==1)
